@@ -1,785 +1,486 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tan y Risueña | Evangelismo Creativo</title>
-  <meta name="description" content="Tan y Risueña: ministerio cristiano para iglesias, escuelas bíblicas, eventos familiares, fundaciones y hospitales. Evangelismo creativo, tecnología y enseñanza bíblica para niños." />
-  <style>
-    :root {
-      --azul: #1d4ed8;
-      --celeste: #38bdf8;
-      --amarillo: #facc15;
-      --rojo: #ef4444;
-      --verde: #22c55e;
-      --oscuro: #111827;
-      --gris: #6b7280;
-      --fondo: #f8fafc;
-      --blanco: #ffffff;
-      --sombra: 0 20px 45px rgba(15, 23, 42, 0.12);
-      --radio: 24px;
-    }
+<!-- ========================= -->
+<!-- HERO PRINCIPAL -->
+<!-- ========================= -->
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<section class="hero" id="inicio">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--fondo);
-      color: var(--oscuro);
-      line-height: 1.6;
-    }
+  <div class="container hero-grid">
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    <div>
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+      <span class="badge">
+        Ministerio para iglesias, familias y nuevas generaciones
+      </span>
 
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
+      <h1>
+        Una forma alegre de compartir el amor de Jesús.
+      </h1>
 
-    .topbar {
-      background: var(--oscuro);
-      color: white;
-      font-size: 0.92rem;
-      padding: 10px 0;
-      text-align: center;
-    }
+      <p>
+        Somos Tan y Risueña. Usamos la herramienta del payaso
+        como un medio para acercarnos a las personas,
+        generar sonrisas y comunicar el mensaje de Jesús
+        de una manera sencilla, sana y cercana.
+      </p>
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #e5e7eb;
-    }
+      <div class="hero-actions">
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 0;
-      gap: 20px;
-    }
+        <a class="btn"
+        href="https://wa.me/message/4KJH22ULJCVYH1"
+        target="_blank">
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      font-size: 1.25rem;
-    }
+          Agendar por WhatsApp
 
-    .logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--amarillo), var(--rojo));
-      color: white;
-      font-size: 1.4rem;
-      box-shadow: 0 10px 24px rgba(239,68,68,0.3);
-    }
+        </a>
 
-    .logo-img {
-      width: 64px;
-      height: 64px;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 3px solid white;
-      box-shadow: 0 10px 25px rgba(0,0,0,.14);
-      background: white;
-    }
+        <a class="btn alt"
+        href="#videos">
 
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-size: 0.95rem;
-      color: #374151;
-    }
+          Ver videos
 
-    .menu a:hover {
-      color: var(--azul);
-    }
+        </a>
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: var(--azul);
-      color: white;
-      padding: 13px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      box-shadow: 0 12px 24px rgba(29,78,216,0.25);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
+      </div>
 
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 30px rgba(29,78,216,0.32);
-    }
+      <div class="verse">
 
-    .btn.alt {
-      background: white;
-      color: var(--azul);
-      border: 2px solid #dbeafe;
-      box-shadow: none;
-    }
+        “Me he hecho de todo para todos,
+        a fin de salvar a algunos por todos
+        los medios posibles.”
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 78px 0 70px;
-      background:
-        radial-gradient(circle at top left, rgba(250,204,21,0.32), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(56,189,248,0.3), transparent 35%),
-        linear-gradient(135deg, #ffffff, #eff6ff);
-    }
+        <br>
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 44px;
-      align-items: center;
-    }
+        <strong>
+          1 Corintios 9:22
+        </strong>
 
-    .badge {
-      display: inline-flex;
-      background: #fff7ed;
-      color: #c2410c;
-      border: 1px solid #fed7aa;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
+      </div>
 
-    h1 {
-      font-size: clamp(2.4rem, 5vw, 4.7rem);
-      line-height: 1.02;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
+    </div>
 
-    .hero p {
-      font-size: 1.18rem;
-      color: #374151;
-      margin-bottom: 28px;
-      max-width: 620px;
-    }
+    <div class="hero-card">
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
+      <div class="hero-photo"></div>
 
-    .verse {
-      background: white;
-      border-left: 6px solid var(--amarillo);
-      padding: 18px 20px;
-      border-radius: 18px;
-      color: #374151;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-      max-width: 640px;
-    }
+    </div>
 
-    .hero-card {
-      background: white;
-      border-radius: 34px;
-      padding: 18px;
-      box-shadow: var(--sombra);
-      position: relative;
-    }
-
-    .hero-photo {
-      min-height: 470px;
-      border-radius: 26px;
-      background: linear-gradient(135deg, rgba(29,78,216,.15), rgba(250,204,21,.25)), url('portada-tan-risuena.jpg') center/cover;
-      display: flex;
-      align-items: flex-end;
-      overflow: hidden;
-    }
-
-    .photo-note {
-      width: 100%;
-      background: linear-gradient(transparent, rgba(0,0,0,0.7));
-      color: white;
-      padding: 90px 24px 24px;
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-
-    .floating {
-      position: absolute;
-      right: -14px;
-      bottom: 34px;
-      background: var(--amarillo);
-      color: #422006;
-      border-radius: 22px;
-      padding: 16px 18px;
-      font-weight: 800;
-      box-shadow: 0 15px 30px rgba(180,83,9,.28);
-    }
-
-    section {
-      padding: 76px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 42px;
-    }
-
-    .section-title span {
-      color: var(--azul);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.85rem;
-    }
-
-    .section-title h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.12;
-      margin: 8px 0 14px;
-    }
-
-    .section-title p {
-      color: var(--gris);
-      font-size: 1.05rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      border-radius: var(--radio);
-      padding: 26px;
-      box-shadow: 0 12px 30px rgba(15,23,42,0.07);
-      border: 1px solid #eef2f7;
-    }
-
-    .icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
-      background: #eff6ff;
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: var(--gris);
-    }
-
-    .about {
-      background: white;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 42px;
-      align-items: center;
-    }
-
-    .about-img {
-      border-radius: 32px;
-      min-height: 430px;
-      background: url('vision-ministerio.jpg') center/cover;
-      box-shadow: var(--sombra);
-    }
-
-    .about h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.12;
-      margin-bottom: 18px;
-    }
-
-    .about p {
-      color: #4b5563;
-      margin-bottom: 16px;
-    }
-
-    .list {
-      display: grid;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .list div {
-      background: #f8fafc;
-      border-radius: 16px;
-      padding: 13px 15px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr .8fr;
-      gap: 16px;
-    }
-
-    .gallery-img {
-      border-radius: 24px;
-      min-height: 240px;
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 12px 25px rgba(15,23,42,0.08);
-    }
-
-    .gallery-img.big {
-      grid-row: span 2;
-      min-height: 500px;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, var(--azul), #0f172a);
-      color: white;
-      border-radius: 36px;
-      padding: 54px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 30px;
-      align-items: center;
-      box-shadow: var(--sombra);
-    }
-
-    .cta h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-
-    .cta p {
-      color: #dbeafe;
-      font-size: 1.08rem;
-    }
-
-    .contact-card {
-      background: white;
-      color: var(--oscuro);
-      border-radius: 26px;
-      padding: 28px;
-    }
-
-    .contact-card a {
-      display: block;
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e7eb;
-      color: #1d4ed8;
-      font-weight: 700;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .video-card {
-      background: white;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 14px 35px rgba(15,23,42,0.09);
-      border: 1px solid #e5e7eb;
-    }
-
-    .video-card iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border: 0;
-      display: block;
-      background: #0f172a;
-    }
-
-    .video-card h3 {
-      padding: 20px 22px 6px;
-      font-size: 1.25rem;
-    }
-
-    .video-card p {
-      padding: 0 22px 24px;
-      color: var(--gris);
-    }
-
-    .center-action {
-      display: flex;
-      justify-content: center;
-      margin-top: 32px;
-    }
-
-    .social-section {
-      background: white;
-    }
-
-    .social-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .social-card {
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      border-radius: 26px;
-      padding: 28px 22px;
-      text-align: center;
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-
-    .social-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 30px rgba(15,23,42,0.1);
-      border-color: #bfdbfe;
-    }
-
-    .social-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 20px;
-      background: white;
-      display: grid;
-      place-items: center;
-      font-size: 1.8rem;
-      margin: 0 auto 16px;
-      box-shadow: 0 10px 24px rgba(15,23,42,0.08);
-    }
-
-    .social-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-
-    .social-card p {
-      color: var(--gris);
-      font-size: 0.95rem;
-    }
-
-    .whatsapp-main {
-      background: #22c55e;
-      color: white !important;
-      text-align: center;
-      border-radius: 999px;
-      padding: 15px 18px !important;
-      margin: 16px 0 10px;
-      border-bottom: 0 !important;
-      box-shadow: 0 12px 24px rgba(34,197,94,.25);
-    }
-
-    footer {
-      background: #0f172a;
-      color: white;
-      padding: 34px 0;
-      text-align: center;
-    }
-
-    footer p {
-      color: #cbd5e1;
-      margin-top: 6px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 99;
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: #22c55e;
-      color: white;
-      display: grid;
-      place-items: center;
-      font-size: 1.9rem;
-      box-shadow: 0 16px 35px rgba(34,197,94,.38);
-    }
-
-    @media (max-width: 900px) {
-      .menu {
-        display: none;
-      }
-
-      .hero-grid,
-      .about-grid,
-      .cta {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .video-grid,
-      .social-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .gallery-img.big {
-        grid-column: span 2;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .cards,
-      .gallery-grid,
-      .video-grid,
-      .social-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-img.big {
-        grid-column: span 1;
-      }
-
-      .hero-photo,
-      .about-img,
-      .gallery-img.big {
-        min-height: 360px;
-      }
-
-      .cta {
-        padding: 34px 24px;
-      }
-
-      .floating {
-        right: 12px;
-        bottom: 18px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="topbar">
-    🎭 Tan y Risueña — Evangelismo creativo, tecnología y escuela bíblica para nuevas generaciones
   </div>
 
-  <header>
-    <div class="container nav">
-      <a href="#inicio" class="brand">
-        <img src="logo.jpg" alt="Logo Tan Barbudo" class="logo-img">
-        <span>Tan y Risueña</span>
+</section>
+
+<!-- ========================= -->
+<!-- VISIÓN -->
+<!-- ========================= -->
+
+<section class="about" id="vision">
+
+  <div class="container about-grid">
+
+    <div class="about-img"></div>
+
+    <div>
+
+      <span class="badge">
+        Nuestra visión
+      </span>
+
+      <h2>
+        Queremos llegar a más personas usando creatividad,
+        amor y servicio.
+      </h2>
+
+      <p>
+        Nuestra visión es acompañar a iglesias,
+        familias, fundaciones y comunidades con propuestas
+        que ayuden a compartir la Palabra de Dios
+        de forma clara, alegre y participativa.
+      </p>
+
+      <p>
+        A través del humor sano, las historias,
+        la música, la globoflexia, la tecnología
+        y las dinámicas, buscamos crear puentes
+        para que niños y familias puedan conocer
+        el amor de Jesús.
+      </p>
+
+      <div class="list">
+
+        <div>
+          ✅ Evangelismo creativo
+        </div>
+
+        <div>
+          ✅ Escuela bíblica y actividades cristianas
+        </div>
+
+        <div>
+          ✅ Tecnología aplicada al ministerio
+        </div>
+
+        <div>
+          ✅ Trabajo con fundaciones y hospitales
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GALERÍA -->
+<!-- ========================= -->
+
+<section id="fotos">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>
+        Galería fotográfica
+      </span>
+
+      <h2>
+        Momentos del ministerio
+      </h2>
+
+      <p>
+        Fotos de actividades, eventos,
+        iglesias y espacios donde compartimos
+        alegría, fe y esperanza.
+      </p>
+
+    </div>
+
+    <div class="photo-gallery">
+
+      <img src="1.jpg" alt="Foto 1">
+      <img src="2.jpg" alt="Foto 2">
+      <img src="3.jpg" alt="Foto 3">
+      <img src="4.jpg" alt="Foto 4">
+      <img src="5.jpg" alt="Foto 5">
+      <img src="6.jpg" alt="Foto 6">
+      <img src="7.jpg" alt="Foto 7">
+      <img src="8.jpg" alt="Foto 8">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- VIDEOS -->
+<!-- ========================= -->
+
+<section id="videos">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>
+        Videos
+      </span>
+
+      <h2>
+        Conocé nuestro trabajo
+      </h2>
+
+      <p>
+        Algunas actividades,
+        clases y recursos compartidos
+        por Tan y Risueña.
+      </p>
+
+    </div>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+
+        <iframe
+        src="https://www.youtube.com/embed/g7FBh_JUirQ"
+        title="Actividades"
+        allowfullscreen>
+        </iframe>
+
+        <h3>
+          Actividades
+        </h3>
+
+        <p>
+          Presentaciones, eventos y momentos
+          especiales compartiendo alegría
+          y el mensaje de Jesús.
+        </p>
+
+      </div>
+
+      <div class="video-card">
+
+        <iframe
+        src="https://www.youtube.com/embed/hlEPjwBOUSc"
+        title="Clases en vivo"
+        allowfullscreen>
+        </iframe>
+
+        <h3>
+          Clases en vivo
+        </h3>
+
+        <p>
+          Espacios de formación,
+          enseñanza y recursos
+          para iglesias y familias.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- REDES -->
+<!-- ========================= -->
+
+<section class="social-section" id="redes">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>
+        Redes sociales
+      </span>
+
+      <h2>
+        Seguinos y compartí el ministerio
+      </h2>
+
+    </div>
+
+    <div class="social-grid">
+
+      <a class="social-card"
+      href="https://youtube.com/@payasotanbarbudo?si=orYgWrJ4gCb75uxn"
+      target="_blank">
+
+        <div class="social-icon">▶️</div>
+
+        <h3>YouTube</h3>
+
       </a>
-      <nav class="menu">
-        <a href="#vision">Visión</a>
-        <a href="#videos">Videos</a>
-        <a href="#fotos">Fotos</a>
-        <a href="#redes">Redes</a>
-        <a href="#contacto">WhatsApp</a>
-      </nav>
-      <a class="btn" href="https://wa.me/message/4KJH22ULJCVYH1" target="_blank">Contactar</a>
+
+      <a class="social-card"
+      href="https://www.instagram.com/payasotanbarbudo?igsh=dWo2a3U0ZmhiNWdn"
+      target="_blank">
+
+        <div class="social-icon">📸</div>
+
+        <h3>Instagram</h3>
+
+      </a>
+
+      <a class="social-card"
+      href="https://www.facebook.com/share/1CyiA78nQJ/"
+      target="_blank">
+
+        <div class="social-icon">📘</div>
+
+        <h3>Facebook</h3>
+
+      </a>
+
+      <a class="social-card"
+      href="https://www.tiktok.com/@payasotanbarbudo?_r=1&_t=ZS-94L1Ar177eG"
+      target="_blank">
+
+        <div class="social-icon">🎵</div>
+
+        <h3>TikTok</h3>
+
+      </a>
+
+      <a class="social-card"
+      href="https://whatsapp.com/channel/0029VadZPwbC6ZveKodyvh41"
+      target="_blank">
+
+        <div class="social-icon">📢</div>
+
+        <h3>Canal WhatsApp</h3>
+
+      </a>
+
+      <a class="social-card"
+      href="https://tanbarbudo-elpayaso.blogspot.com/?m=1"
+      target="_blank">
+
+        <div class="social-icon">🌐</div>
+
+        <h3>Blog</h3>
+
+      </a>
+
     </div>
-  </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">Ministerio para iglesias, familias y nuevas generaciones</span>
-          <h1>Una forma alegre de compartir el amor de Jesús.</h1>
-          <p>
-            Somos Tan y Risueña. Usamos la herramienta del payaso como un medio para acercarnos a las personas, generar sonrisas y comunicar el mensaje de Jesús de una manera sencilla, sana y cercana.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="https://wa.me/message/4KJH22ULJCVYH1" target="_blank">Invitarnos a tu iglesia</a>
-            <a class="btn alt" href="#videos">Ver videos</a>
-          </div>
-          <div class="verse">
-            “Me he hecho de todo para todos, a fin de salvar a algunos por todos los medios posibles.”<br>
-            <strong>1 Corintios 9:22</strong>
-          </div>
-        </div>
+  </div>
 
-        <div class="hero-card">
-          <div class="hero-photo">
-            <div class="photo-note">Colocá aquí una foto principal de Tan y Risueña.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+</section>
 
-    <section class="about" id="vision">
-      <div class="container about-grid">
-        <div class="about-img"></div>
-        <div>
-          <span class="badge">Nuestra visión</span>
-          <h2>Queremos llegar a más personas usando creatividad, amor y servicio.</h2>
-          <p>
-            Nuestra visión es acompañar a iglesias, familias, fundaciones y comunidades con propuestas que ayuden a compartir la Palabra de Dios de forma clara, alegre y participativa.
-          </p>
-          <p>
-            Creemos que el payaso no es el centro, sino una herramienta. A través del humor sano, las historias, la música, la globoflexia, la tecnología y las dinámicas, buscamos crear puentes para que niños, adolescentes y familias puedan conocer el amor de Jesús.
-          </p>
-          <p>
-            También servimos en espacios solidarios y de acompañamiento, incluyendo actividades junto a fundaciones y visitas como payasos de hospital, llevando alegría y esperanza donde más se necesita.
-          </p>
+<!-- ========================= -->
+<!-- FAQ -->
+<!-- ========================= -->
 
-          <div class="list">
-            <div>✅ Evangelismo creativo para niños, familias e iglesias</div>
-            <div>✅ Recursos para escuela bíblica y actividades cristianas</div>
-            <div>✅ Tecnología aplicada al ministerio y la enseñanza</div>
-            <div>✅ Servicio en fundaciones, hospitales y espacios comunitarios</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<section class="faq-section" id="faq">
 
-    <section id="fotos">
-      <div class="container">
-        <div class="section-title">
-          <span>Fotos</span>
-          <h2>Momentos del ministerio</h2>
-          <p>Una muestra de actividades, eventos, presentaciones y espacios donde compartimos alegría, fe y esperanza.</p>
-        </div>
+  <div class="container">
 
-        <div class="gallery-grid">
-          <div class="gallery-img big" style="background-image:url('galeria-iglesia.jpg')"></div>
-          <div class="gallery-img" style="background-image:url('galeria-hospital.jpg')"></div>
-          <div class="gallery-img" style="background-image:url('galeria-fundacion.jpg')"></div>
-          <div class="gallery-img" style="background-image:url('galeria-evento.jpg')"></div>
-        </div>
-      </div>
-    </section>
+    <div class="section-title">
 
-    <section id="videos">
-      <div class="container">
-        <div class="section-title">
-          <span>Videos</span>
-          <h2>Conocé nuestro trabajo en acción</h2>
-          <p>En esta sección podés colocar videos de YouTube para que las iglesias vean presentaciones, enseñanzas, canciones, eventos y recursos de Tan y Risueña.</p>
-        </div>
+      <span>
+        Preguntas frecuentes
+      </span>
 
-        <div class="video-grid">
-          <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/g7FBh_JUirQ" title="Video de Tan y Risueña" allowfullscreen></iframe>
-            <h3>Actividades</h3>
-            <p>Conocé parte de nuestras presentaciones, eventos y momentos especiales compartiendo alegría y el mensaje de Jesús.</p>
-          </div>
-          <div class="video-card">
-            <iframe src="https://www.youtube.com/embed/hlEPjwBOUSc" title="Video de Tan y Risueña" allowfullscreen></iframe>
-            <h3>Clases en vivo</h3>
-            <p>Espacios de formación, enseñanza y recursos para iglesias, maestros, líderes y familias.</p>
-          </div>
-        </div>
+      <h2>
+        Antes de invitarnos
+      </h2>
 
-        <div class="center-action">
-          <a class="btn" href="https://youtube.com/@payasotanbarbudo?si=orYgWrJ4gCb75uxn" target="_blank">Ver canal de YouTube</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="social-section" id="redes">
-      <div class="container">
-        <div class="section-title">
-          <span>Redes sociales</span>
-          <h2>Seguinos y compartí el ministerio</h2>
-          <p>Desde nuestras redes compartimos ideas, videos, recursos, enseñanzas y momentos especiales para bendecir a más personas.</p>
-        </div>
-
-        <div class="social-grid">
-          <a class="social-card" href="https://youtube.com/@payasotanbarbudo?si=orYgWrJ4gCb75uxn" target="_blank">
-            <div class="social-icon">▶️</div>
-            <h3>YouTube</h3>
-            <p>Videos, enseñanzas, canciones y recursos.</p>
-          </a>
-          <a class="social-card" href="https://www.facebook.com/share/1CyiA78nQJ/" target="_blank">
-            <div class="social-icon">📘</div>
-            <h3>Facebook</h3>
-            <p>Eventos, fotos y publicaciones para compartir.</p>
-          </a>
-          <a class="social-card" href="https://www.instagram.com/payasotanbarbudo?igsh=dWo2a3U0ZmhiNWdn" target="_blank">
-            <div class="social-icon">📸</div>
-            <h3>Instagram</h3>
-            <p>Reels, historias, fotos y novedades.</p>
-          </a>
-          <a class="social-card" href="https://www.tiktok.com/@payasotanbarbudo?_r=1&_t=ZS-94L1Ar177eG" target="_blank">
-            <div class="social-icon">🎵</div>
-            <h3>TikTok</h3>
-            <p>Contenido corto, dinámico y evangelístico.</p>
-          </a>
-          <a class="social-card" href="https://whatsapp.com/channel/0029VadZPwbC6ZveKodyvh41" target="_blank">
-            <div class="social-icon">📢</div>
-            <h3>Canal de WhatsApp</h3>
-            <p>Novedades, recursos y mensajes para la comunidad.</p>
-          </a>
-          <a class="social-card" href="https://tanbarbudo-elpayaso.blogspot.com/?m=1" target="_blank">
-            <div class="social-icon">🌐</div>
-            <h3>Blog</h3>
-            <p>Materiales, reflexiones y contenido del ministerio.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>¿Querés comunicarte con Tan y Risueña?</h2>
-            <p>
-              Escribinos por WhatsApp para consultar fechas, eventos, actividades para iglesias, escuela bíblica, fundaciones o propuestas especiales. Será un gusto conversar y ver cómo podemos servirles.
-            </p>
-          </div>
-          <div class="contact-card">
-            <h3>Contacto directo</h3>
-            <a class="whatsapp-main" href="https://wa.me/message/4KJH22ULJCVYH1" target="_blank">💬 Enviar mensaje por WhatsApp</a>
-            <a href="tel:+5492964465363">📱 +54 9 2964 46-5363</a>
-            <a href="mailto:tanbarbudoclow@gmail.com">📧 tanbarbudoclow@gmail.com</a>
-            <a href="https://youtube.com/@payasotanbarbudo?si=orYgWrJ4gCb75uxn" target="_blank">▶️ YouTube: Payaso Tan Barbudo</a>
-            <a href="https://www.instagram.com/payasotanbarbudo?igsh=dWo2a3U0ZmhiNWdn" target="_blank">📸 Instagram: @payasotanbarbudo</a>
-            <a href="https://www.facebook.com/share/1CyiA78nQJ/" target="_blank">📘 Facebook: Tan Barbudo</a>
-            <a href="https://www.tiktok.com/@payasotanbarbudo?_r=1&_t=ZS-94L1Ar177eG" target="_blank">🎵 TikTok: @payasotanbarbudo</a>
-            <a href="https://whatsapp.com/channel/0029VadZPwbC6ZveKodyvh41" target="_blank">📢 Canal de WhatsApp</a>
-            <a href="https://tanbarbudo-elpayaso.blogspot.com/?m=1" target="_blank">🌐 Blog Tan Barbudo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <strong>🎭 Tan y Risueña</strong>
-      <p>Creatividad al servicio del Evangelio · #payasotanbarbudo</p>
     </div>
-  </footer>
 
-  <a class="whatsapp" href="https://wa.me/message/4KJH22ULJCVYH1" target="_blank" aria-label="Enviar mensaje por WhatsApp">💬</a>
+    <div class="faq-grid">
 
-</body>
-</html>
+      <details class="faq-item">
+
+        <summary>
+          ¿Qué actividades realizan?
+        </summary>
+
+        <p>
+          Presentaciones cristianas,
+          dinámicas, juegos, canciones,
+          globoflexia y actividades familiares.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          ¿Trabajan con fundaciones?
+        </summary>
+
+        <p>
+          Sí, participamos en espacios
+          solidarios y hospitales.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          ¿Pueden visitar iglesias?
+        </summary>
+
+        <p>
+          Sí, coordinamos eventos,
+          escuelas bíblicas y actividades especiales.
+        </p>
+
+      </details>
+
+      <details class="faq-item">
+
+        <summary>
+          ¿Cómo podemos contactarlos?
+        </summary>
+
+        <p>
+          La forma más rápida es por WhatsApp.
+        </p>
+
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- EBOOKS -->
+<!-- ========================= -->
+
+<section class="materials-section" id="materiales">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>
+        Materiales y ebooks
+      </span>
+
+      <h2>
+        Próximamente
+      </h2>
+
+      <p>
+        Espacio preparado para
+        recursos descargables,
+        talleres y materiales digitales.
+      </p>
+
+    </div>
+
+    <div class="materials-grid">
+
+      <div class="material-card">
+
+        <div class="material-cover">
+          📘
+        </div>
+
+        <h3>
+          Ebook próximamente
+        </h3>
+
+      </div>
+
+      <div class="material-card">
+
+        <div class="material-cover">
+          🎨
+        </div>
+
+        <h3>
+          Talleres y recursos
+        </h3>
+
+      </div>
+
+      <div class="material-card">
+
+        <div class="material-cover">
+          📖
+        </div>
+
+        <h3>
+          Materiales descargables
+        </h3>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
