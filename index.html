@@ -93,6 +93,16 @@
       box-shadow: 0 10px 24px rgba(239,68,68,0.3);
     }
 
+    .logo-img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 3px solid white;
+      box-shadow: 0 10px 25px rgba(0,0,0,.14);
+      background: white;
+    }
+
     .menu {
       display: flex;
       align-items: center;
@@ -202,7 +212,7 @@
     .hero-photo {
       min-height: 470px;
       border-radius: 26px;
-      background: linear-gradient(135deg, rgba(29,78,216,.15), rgba(250,204,21,.25)), url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80') center/cover;
+      background: linear-gradient(135deg, rgba(29,78,216,.15), rgba(250,204,21,.25)), url('portada-tan-risuena.jpg') center/cover;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
@@ -306,7 +316,7 @@
     .about-img {
       border-radius: 32px;
       min-height: 430px;
-      background: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1200&q=80') center/cover;
+      background: url('vision-ministerio.jpg') center/cover;
       box-shadow: var(--sombra);
     }
 
@@ -582,12 +592,13 @@
   <header>
     <div class="container nav">
       <a href="#inicio" class="brand">
-        <span class="logo">🎈</span>
+        <img src="logo.jpg" alt="Logo Tan Barbudo" class="logo-img">
         <span>Tan y Risueña</span>
       </a>
       <nav class="menu">
         <a href="#vision">Visión</a>
         <a href="#videos">Videos</a>
+        <a href="#fotos">Fotos</a>
         <a href="#redes">Redes</a>
         <a href="#contacto">WhatsApp</a>
       </nav>
@@ -649,12 +660,30 @@
       </div>
     </section>
 
+    <section id="fotos">
+      <div class="container">
+        <div class="section-title">
+          <span>Fotos</span>
+          <h2>Momentos del ministerio</h2>
+          <p>Una muestra de actividades, eventos, presentaciones y espacios donde compartimos alegría, fe y esperanza.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-img big" style="background-image:url('galeria-iglesia.jpg')"></div>
+          <div class="gallery-img" style="background-image:url('galeria-ninos.jpg')"></div>
+          <div class="gallery-img" style="background-image:url('galeria-hospital.jpg')"></div>
+          <div class="gallery-img" style="background-image:url('galeria-fundacion.jpg')"></div>
+          <div class="gallery-img" style="background-image:url('galeria-evento.jpg')"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="videos">
       <div class="container">
         <div class="section-title">
           <span>Videos</span>
           <h2>Conocé nuestro trabajo en acción</h2>
-          <p>En esta sección podés colocar videos de YouTube para que las iglesias vean presentaciones, enseñanzas, canciones, eventos y recursos de Tan y Risueña.</p>
+          <p>vean presentaciones, enseñanzas, canciones, eventos y recursos de Tan y Risueña.</p>
         </div>
 
         <div class="video-grid">
@@ -748,7 +777,7 @@
   <footer>
     <div class="container">
       <strong>🎭 Tan y Risueña</strong>
-      <p>Creatividad al servicio del Evangelio · #payasotanbarbudo</p>
+      <p>Creatividad al servicio del Evangelio · #tanyrisueña</p>
     </div>
   </footer>
 
